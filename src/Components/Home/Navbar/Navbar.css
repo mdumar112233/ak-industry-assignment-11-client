@@ -1,0 +1,18 @@
+.menu-link ul{
+    list-style: none;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.menu-link ul li{
+    display: inline-block;
+    margin: 10px;
+}
+.menu-link ul li .link{
+    text-decoration: none;
+    /* color: #fff; */
+}
+.logo-image img{
+    height: 100px;
+    margin-left: 100px;
+}
