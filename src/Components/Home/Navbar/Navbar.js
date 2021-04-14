@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../image/f9e48bbcf7aca98f0eff903681e84a2b.png';
-import './Header.css';
+import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <div  className='row header-container'>
+        <div  className='row'>
             <div className="col-md-4 logo-image">
                 <img src={logo} alt=""/>
             </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
                         <Link className='link'>Contact</Link>
                     </li>
                     <li>
-                        <Link className='link' to='/login'>Login</Link>
+                        <Link className='link link-btn' to='/login'>Login</Link>
                     </li>
                 </ul>
             </div>
