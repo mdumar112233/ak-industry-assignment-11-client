@@ -6,19 +6,21 @@
 }
 .menu-link ul li{
     display: inline-block;
-    margin: 15px;
+    margin: 10px;
     font-size: 18px;
     font-weight: bold;
+    padding: 8px 10px;
 }
 .menu-link ul li .link{
     text-decoration: none;
     color: #fff;
 }
-.menu-link .link-btn{
-    background-color: #106466;
-    padding: 20px 25px;
-}
 .logo-image img{
     height: 100px;
     margin-left: 100px;
+}
+.menu-link .login-btn{
+    background-color: #106466;
+    padding: 10px 18px;
+    border-radius: 3px;
 }
