@@ -9,6 +9,7 @@ import Home from './Components/Home/Home/Home';
 import Dashboard from './Components/UserDasboard/Dashboard/Dashboard';
 import Book from './Components/UserDasboard/Book/Book';
 import ServiceList from './Components/UserDasboard/ServiceList/ServiceList';
+import Comment from './Components/UserDasboard/Comment/Comment';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <ServiceList/>
         </Route>
         <Route path='/comment'>
-          
+          <Comment/>
         </Route>  
       </Switch>
     </Router>
