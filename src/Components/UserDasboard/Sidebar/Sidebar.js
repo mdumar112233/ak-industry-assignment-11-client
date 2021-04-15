@@ -15,13 +15,13 @@ const Sidebar = () => {
             <div className="menu">
                 <ul>
                     <li>
-                        <img src={cart} alt=""/> <span><Link className='link'>Book</Link></span>
+                        <img src={cart} alt=""/> <span><Link className='link' to='/book'>Book</Link></span>
                     </li>
                     <li>
-                        <img src={list} alt=""/> <span><Link className='link'>Book List</Link></span>
+                        <img src={list} alt=""/> <span><Link className='link' to='/bookList'>Book List</Link></span>
                     </li>
                     <li>
-                        <img src={comment} alt=""/> <span><Link className='link'>Comment</Link></span>
+                        <img src={comment} alt=""/> <span><Link className='link' to='/comment'>Comment</Link></span>
                     </li>
                 </ul>
             </div>

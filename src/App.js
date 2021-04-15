@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Dashboard from './Components/UserDasboard/Dashboard/Dashboard';
+import Book from './Components/UserDasboard/Book/Book';
+import ServiceList from './Components/UserDasboard/ServiceList/ServiceList';
 
 function App() {
   return (
@@ -21,6 +23,15 @@ function App() {
         <Route path='/dashboard'>
           <Dashboard/>
         </Route>
+        <Route path='/book'>
+          <Book/>
+        </Route>
+        <Route path='/bookList'>
+          <ServiceList/>
+        </Route>
+        <Route path='/comment'>
+          
+        </Route>  
       </Switch>
     </Router>
   );
