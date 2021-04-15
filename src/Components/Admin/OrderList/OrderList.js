@@ -6,7 +6,16 @@ const OrderList = () => {
         <div className='row'>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
-                <h3>Thisl is order list</h3>
+                <h3>Order List</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service</th>
+                        <th>Pay with</th>
+                        <th>Status</th>
+                    </tr>
+                </table>
             </div>
         </div>
     );
