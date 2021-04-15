@@ -30,7 +30,7 @@ function App() {
         <Route path='/bookList'>
           <ServiceList/>
         </Route>
-        <Route path='/comment'>
+        <Route path='/review'>
           <Comment/>
         </Route>  
       </Switch>

@@ -21,7 +21,7 @@ const Sidebar = () => {
                         <img src={list} alt=""/> <span><Link className='link' to='/bookList'>Book List</Link></span>
                     </li>
                     <li>
-                        <img src={comment} alt=""/> <span><Link className='link' to='/comment'>Comment</Link></span>
+                        <img src={comment} alt=""/> <span><Link className='link' to='/review'>Review</Link></span>
                     </li>
                 </ul>
             </div>
