@@ -4,12 +4,16 @@ import list from '../../../image/clipboard.png';
 import comment from '../../../image/comment.png';
 import logo from '../../../image/f9e48bbcf7aca98f0eff903681e84a2b.png';
 import './Sidebar.css';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 const Sidebar = () => {
+    const history = useHistory();
+    const handleHome = () => {
+        history.push('/')
+    }
     return (
         <div className='col-md-2 sidebar-container'>
-            <div className="sidebar-title">
+            <div style={{cursor: 'pointer'}} onClick={handleHome} className="sidebar-title">
                 <img src={logo} alt=""/><span>AK INDUSTRY</span>
             </div>
             <div className="menu">

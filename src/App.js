@@ -10,6 +10,7 @@ import Dashboard from './Components/UserDasboard/Dashboard/Dashboard';
 import Book from './Components/UserDasboard/Book/Book';
 import ServiceList from './Components/UserDasboard/ServiceList/ServiceList';
 import Comment from './Components/UserDasboard/Comment/Comment';
+import Admin from './Components/Admin/Admin/Admin';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         <Route path='/review'>
           <Comment/>
         </Route>  
+        <Route path='/admin'>
+          <Admin/>
+        </Route>
       </Switch>
     </Router>
   );
