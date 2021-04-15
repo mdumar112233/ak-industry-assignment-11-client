@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
+import Dashboard from './Components/UserDasboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path='/home'>
           <Home/>
+        </Route>
+        <Route path='/dashboard'>
+          <Dashboard/>
         </Route>
       </Switch>
     </Router>

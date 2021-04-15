@@ -1,0 +1,8 @@
+.review-detail img{
+    height: 100px;
+    border-radius: 4px;
+
+}
+.review-detail .star{
+    height: 30px;
+}
