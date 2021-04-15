@@ -1,9 +1,10 @@
 import React from 'react';
+import Book from '../Book/Book';
 
 const Dashboard = () => {
     return (
         <div>
-            <h3>This is dashboard</h3>
+            <Book></Book>
         </div>
     );
 };

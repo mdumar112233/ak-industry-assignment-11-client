@@ -1,0 +1,28 @@
+.sidebar-title img{
+    height: 70px;
+    margin-left: 20px;
+}
+.sidebar-title span{
+    font-size: 15px;
+    color: #fff;
+    margin-top: 6px;
+}
+.sidebar-container{
+    background-color: #106466;
+    height: 100vh;
+}
+.menu{
+    margin-top: 20px;
+}
+.menu img{
+    height: 17px;
+    margin: 10px 0;
+    margin-left: 30px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li .link{
+    text-decoration: none;
+    color: #fff;
+}
