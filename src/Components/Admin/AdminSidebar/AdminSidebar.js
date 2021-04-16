@@ -28,7 +28,7 @@ const AdminSidebar = () => {
                         <img src={add} alt=""/> <span><Link className='link' to='/addService'>Add Service</Link></span>
                     </li>
                     <li>
-                        <img src={addUser} alt=""/> <span><Link className='link' to='/admin'>Make Admin</Link></span>
+                        <img src={addUser} alt=""/> <span><Link className='link' to='/addAdmin'>Make Admin</Link></span>
                     </li>
                     <li>
                         <img src={manage} alt=""/> <span><Link className='link' to='/manageService'>Manage Service</Link></span>

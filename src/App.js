@@ -11,6 +11,9 @@ import Book from './Components/UserDasboard/Book/Book';
 import ServiceList from './Components/UserDasboard/ServiceList/ServiceList';
 import Comment from './Components/UserDasboard/Comment/Comment';
 import Admin from './Components/Admin/Admin/Admin';
+import AddService from './Components/Admin/AddService/AddService';
+import OrderList from './Components/Admin/OrderList/OrderList';
+import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -36,6 +39,15 @@ function App() {
         </Route>  
         <Route path='/admin'>
           <Admin/>
+        </Route>
+        <Route path='/order'>
+          <OrderList></OrderList>
+        </Route>
+        <Route path='/addService'>
+          <AddService/>
+        </Route>
+        <Route path='/addAdmin'>
+          <MakeAdmin/>
         </Route>
       </Switch>
     </Router>

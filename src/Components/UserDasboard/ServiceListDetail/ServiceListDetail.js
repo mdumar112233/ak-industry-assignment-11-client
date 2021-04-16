@@ -13,7 +13,7 @@ const ServiceListDetail = ({serviceList}) => {
                     <div className='status'>
                         <form>
                             <select name="status" id="status" >
-                                <option className='panding'     value="Panding">Panding</option>
+                                <option className='panding'value="Panding">Panding</option>
                                 <option className='start' value="Start">Start</option>
                                 <option className='done' value="Done">Done</option>
                             </select>
