@@ -17,7 +17,6 @@ const PaymentCard = () => {
     }
     const cardElement = elements.getElement(CardElement);
 
-    // Use your card Element with other Stripe.js APIs
     const {error, paymentMethod} = await stripe.createPaymentMethod({
       type: 'card',
       card: cardElement,
@@ -29,7 +28,6 @@ const PaymentCard = () => {
     } else {
       setPaymentSuccess(paymentMethod.id);
       setPaymentError(null);
-      // handlePayment(paymentMethod.id);
     }
   };
 
