@@ -14,6 +14,7 @@ import AddService from './Components/Admin/AddService/AddService';
 import OrderList from './Components/Admin/OrderList/OrderList';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './Components/Admin/ManageService/ManageService';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
         </Route>
         <Route path='/manageService'>
           <ManageService/>
+        </Route>
+        <Route path='/login'>
+          <Login/>
         </Route>
       </Switch>
     </Router>
