@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import manOne from '../../../image/man 1.webp';
 import manTwo from '../../../image/man 2.webp';
 import manThree from '../../../image/man 3.webp';
@@ -24,6 +24,11 @@ const reviewDetail = [
 ]
 
 const Review = () => {
+    const [review, setReview] = useState([]);
+
+    useEffect(() => {
+        
+    }, [])
     return (
         <div className='container' style={{height: '500px'}}>
             <div className="main-title text-center">
@@ -31,7 +36,7 @@ const Review = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!</p>
                 </div>
 
-                <div className="d-flex justify-content-center">
+                <div className="d-flex flex-column">
                     <div className='row mt-5 ms-4'>
                         {
                             reviewDetail.map(review => <ReviewDetail review={review}></ReviewDetail>)
