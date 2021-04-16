@@ -1,6 +1,9 @@
 import React from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
+import firebaseConfig from './firebaseConfig';
+import googleIcon from '../../image/googleIcon.png';
+import './Login.css';
 
 if(firebase.apps.length === 0){
     firebase.initializeApp(firebaseConfig);
@@ -32,8 +35,11 @@ const Login = () => {
     return (
         <div>
             <div className="login-section">
-                <h3>Login</h3>
-                <button onClick={handleSignIn}>Login With Google</button>
+                <h2>Login</h2>
+                {/* <input onClick={handleSignIn}>Login With Google</input> */}
+                <div className="signIn">
+                    <span> <img src={googleIcon} alt=""/></span>  <input className='login-btn' onClick={handleSignIn} type="button" value='Login with Google'/>
+                </div>
             </div>
         </div>
     );

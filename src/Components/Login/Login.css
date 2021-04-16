@@ -1,0 +1,21 @@
+.login-section {
+    margin: 12rem 35rem;
+}
+.login-section h2{
+    margin-left: 63px;
+    margin-bottom: 20px;
+}
+.login-section img{
+    height: 30px;
+    margin-right: 10px;
+}
+.login-btn{
+    background-color: transparent;
+    border: 0;
+}
+.signIn{
+    width: 200px;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 8px;
+}
