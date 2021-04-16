@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import './Comment.css';
 import ReactStars from "react-rating-stars-component";
+import upload from '../../../image/cloud-computing.png';
+import axios from 'axios';
+
 
 const Comment = () => {
     const [review, setReview] = useState({
@@ -10,6 +13,8 @@ const Comment = () => {
         description: ''
     })
     const [ratingCount, setRatingCount] = useState(null);
+    const [imageUrl, setImageUrl] = useState(null);
+
 
     const ratingChanged = (count) => {
         setRatingCount(count)
@@ -21,6 +26,22 @@ const Comment = () => {
         newInfo[e.target.name] = e.target.value;
         setReview(newInfo);
     }
+
+    const handleImage = e => {
+        console.log(e.target.files);
+        const imageData = new FormData();
+        imageData.set('key', '0bbd94d120064c98ef673307396657da');
+        imageData.append('image', e.target.files[0]);
+
+        axios.post('https://api.imgbb.com/1/upload', imageData)
+        .then(res => {
+            setImageUrl(res.data.data.display_url);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
     const handleSubmit = () => {
         const allReview = {...review, ratingCount}
         console.log(allReview);
@@ -40,6 +61,10 @@ const Comment = () => {
             <Sidebar></Sidebar>
             <div className="col-md-10 mt-5">
                 <h3 className='mb-3 ms-4 '>Review</h3>
+                <h5 className='ms-4'>Image</h5>
+                <label className='ms-4' className='image-upload' htmlFor="image">
+                <span> <img style={{height: '18px', marginTop: '-5px'}} src={upload} alt=""/></span>   Upload image</label><br/>
+                <input onChange={handleImage} id='image' type="file" style={{visibility: 'hidden'}}/> <br/>
                 <input onBlur={handleChange} name='name' className='ms-4 w-50' type="text" placeholder='Your name' /><br/>
                 <input onBlur={handleChange} name='service' className='mt-3 mb-3 ms-4 w-50' type="text" placeholder='Category of service' /><br/>
                 <span className='ms-4'>Rating here:</span><div className='rating'>

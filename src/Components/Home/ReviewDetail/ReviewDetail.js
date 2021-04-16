@@ -11,7 +11,7 @@ const ReviewDetail = ({review}) => {
                     <div style={{marginLeft: '120px'}}>
                         <ReactStars
                         size={24}
-                        value={4}
+                        value={review.ratingCount}
                         edit={false}
                         activeColor="#ffd700"
                         />

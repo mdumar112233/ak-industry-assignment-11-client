@@ -1,33 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import manOne from '../../../image/man 1.webp';
-import manTwo from '../../../image/man 2.webp';
-import manThree from '../../../image/man 3.webp';
 import ReviewDetail from '../ReviewDetail/ReviewDetail';
 import './Review.css';
 
-const reviewDetail = [
-    {
-        name: 'umar faruk',
-        image: manOne,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!', 
-    },
-    {
-        name: 'rofik kahn',
-        image: manTwo,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!'
-    },
-    {
-        name: 'sohel akbar',
-        image: manThree,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!'
-    }
-]
 
 const Review = () => {
     const [review, setReview] = useState([]);
 
     useEffect(() => {
-        
+        fetch('http://localhost:5000/reviewData')
+        .then(res => res.json())
+        .then(data => setReview(data))
     }, [])
     return (
         <div className='container' style={{height: '500px'}}>
@@ -39,7 +21,7 @@ const Review = () => {
                 <div className="d-flex flex-column">
                     <div className='row mt-5 ms-4'>
                         {
-                            reviewDetail.map(review => <ReviewDetail review={review}></ReviewDetail>)
+                            review.map(review => <ReviewDetail review={review}></ReviewDetail>)
                         }
                     </div>
                 </div>

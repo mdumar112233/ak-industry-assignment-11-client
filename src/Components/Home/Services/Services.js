@@ -1,28 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
-import map from '../../../image/sketch.png';
-import plan from '../../../image/plan.png';
-import home from '../../../image/home(1).png';
 import { useHistory } from "react-router-dom";
 
-// const serviceData = [
-//     {
-//         name: 'Construction Map',
-//         icon: map,
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto'
-//     },
-//     {
-//         name: 'Planning',
-//         icon: plan,
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto'
-//     },
-//     {
-//         name: 'Home Design',
-//         icon: home,
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto'
-//     }
-// ]
 
 const Services = () => {
     const history = useHistory();
