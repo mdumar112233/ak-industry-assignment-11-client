@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
 import googleIcon from '../../image/googleIcon.png';
 import './Login.css';
+import { UserContext } from '../../App';
 
 if(firebase.apps.length === 0){
     firebase.initializeApp(firebaseConfig);
   }
 
 const Login = () => {
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     // const history = useHistory();
     // const location = useLocation();
     // let { from } = location.state || { from: { pathname: "/" } };
@@ -22,7 +23,7 @@ const Login = () => {
           const user = result.user;
           const {displayName, email} = user;
           const signInUser = {name: displayName, email}; 
-        //   setLoggedInUser(signInUser);
+          setLoggedInUser(signInUser);
         //   history.replace(from);
         }).catch((error) => {
           const errorCode = error.code;
@@ -36,7 +37,6 @@ const Login = () => {
         <div>
             <div className="login-section">
                 <h2>Login</h2>
-                {/* <input onClick={handleSignIn}>Login With Google</input> */}
                 <div className="signIn">
                     <span> <img src={googleIcon} alt=""/></span>  <input className='login-btn' onClick={handleSignIn} type="button" value='Login with Google'/>
                 </div>

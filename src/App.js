@@ -15,10 +15,16 @@ import OrderList from './Components/Admin/OrderList/OrderList';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './Components/Admin/ManageService/ManageService';
 import Login from './Components/Login/Login';
+import { createContext, useState } from 'react';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <p>email: {loggedInUser.email}</p>
       <Switch>
         <Route exact path='/'>
           <Home/>
@@ -58,6 +64,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 
