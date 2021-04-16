@@ -10,14 +10,16 @@ const Book = () => {
         <div className='row'>
             <Sidebar></Sidebar>
             <div className="col-md-10 mt-5 ml-5" style={{position: 'absolute', right: 0}}>
-                <h3>Book</h3>
-                <input className='w-50' type="text" placeholder='Enter your name'/><br/>
-                <input className='mt-3 mb-3 w-50' type="text" placeholder='Enter your email'/><br/>
-                <input className='w-50' type="text" placeholder='Enter your service'/>
-                <div className='w-50 mt-3'>
-                    <Elements stripe={stripePromise}>
-                        <PaymentCard></PaymentCard>                   
-                    </Elements>
+                <div className="ms-4">
+                    <h3>Book</h3>
+                    <input className='w-50' type="text" placeholder='Enter your name'/><br/>
+                    <input className='mt-3 mb-3 w-50' type="text" placeholder='Enter your email'/><br/>
+                    <input className='w-50' type="text" placeholder='Enter your service'/>
+                    <div className='w-50 mt-3'>
+                        <Elements stripe={stripePromise}>
+                            <PaymentCard></PaymentCard>                   
+                        </Elements>
+                    </div>
                 </div>
             </div>
         </div>

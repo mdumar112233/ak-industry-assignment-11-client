@@ -5,7 +5,7 @@ const ServiceListDetail = ({serviceList}) => {
     return (
         <div className='col-md-4'>
                 <h3 className='ms-4 mt-3'>Booking List</h3>
-            <div className="service mt-5">
+            <div className="service mt-5 ms-4">
                 <div className="img-option d-flex justify-content-between">
                     <div>
                         <img src={serviceList.image} alt=""/>

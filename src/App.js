@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Dashboard from './Components/UserDasboard/Dashboard/Dashboard';
@@ -14,6 +13,7 @@ import Admin from './Components/Admin/Admin/Admin';
 import AddService from './Components/Admin/AddService/AddService';
 import OrderList from './Components/Admin/OrderList/OrderList';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
+import ManageService from './Components/Admin/ManageService/ManageService';
 
 function App() {
   return (
@@ -48,6 +48,9 @@ function App() {
         </Route>
         <Route path='/addAdmin'>
           <MakeAdmin/>
+        </Route>
+        <Route path='/manageService'>
+          <ManageService/>
         </Route>
       </Switch>
     </Router>

@@ -32,7 +32,7 @@ const Review = () => {
                 </div>
 
                 <div className="d-flex justify-content-center">
-                    <div className='row mt-5'>
+                    <div className='row mt-5 ms-4'>
                         {
                             reviewDetail.map(review => <ReviewDetail review={review}></ReviewDetail>)
                         }
