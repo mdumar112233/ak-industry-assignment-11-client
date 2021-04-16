@@ -43,7 +43,7 @@ const Comment = () => {
     }
 
     const handleSubmit = () => {
-        const allReview = {...review, ratingCount}
+        const allReview = {...review, ratingCount, image: imageUrl}
         console.log(allReview);
         fetch('http://localhost:5000/review', {
             method: 'POST',
@@ -62,8 +62,8 @@ const Comment = () => {
             <div className="col-md-10 mt-5">
                 <h3 className='mb-3 ms-4 '>Review</h3>
                 <h5 className='ms-4'>Image</h5>
-                <label className='ms-4' className='image-upload' htmlFor="image">
-                <span> <img style={{height: '18px', marginTop: '-5px'}} src={upload} alt=""/></span>   Upload image</label><br/>
+                <label  className='image-upload ms-4' htmlFor="image">
+                <span> <img style={{height: '18px', marginTop: '-5px'}} src={upload} alt=""/></span>   Upload image</label>
                 <input onChange={handleImage} id='image' type="file" style={{visibility: 'hidden'}}/> <br/>
                 <input onBlur={handleChange} name='name' className='ms-4 w-50' type="text" placeholder='Your name' /><br/>
                 <input onBlur={handleChange} name='service' className='mt-3 mb-3 ms-4 w-50' type="text" placeholder='Category of service' /><br/>

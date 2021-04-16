@@ -28,7 +28,7 @@ function App() {
         <Route path='/dashboard'>
           <Dashboard/>
         </Route>
-        <Route path='/book'>
+        <Route path='/book/:id'>
           <Book/>
         </Route>
         <Route path='/bookList'>

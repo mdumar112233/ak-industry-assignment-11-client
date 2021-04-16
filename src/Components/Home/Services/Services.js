@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
-import { useHistory } from "react-router-dom";
 
 
 const Services = () => {
-    const history = useHistory();
-    const handleService = () => {
-        history.push('/dashboard')
-    }
     const [serviceCard, setServiceCard] = useState([]);
-    console.log(serviceCard);
+
 
     useEffect(() => {
         fetch('http://localhost:5000/serviceData')
@@ -25,7 +20,7 @@ const Services = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!</p>
             </div>
             <div className="d-flex flex-column">
-                <div className='row mt-5' onClick={handleService} style={{cursor: 'pointer'}}>
+                <div className='row mt-5' style={{cursor: 'pointer'}}>
                     {
                         serviceCard.map(service => <ServiceCard service={service}></ServiceCard>)
                     }
