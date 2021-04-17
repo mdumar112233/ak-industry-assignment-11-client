@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import OrderListDetail from '../OrderListDetail/OrderListDetail';
 import './OrderList.css';
 
-const tableData = [
-    {
-        name: 'umar faruk',
-        email: 'umar@gmail.com',
-        service: 'home design',
-        pay: 'creadit card',
-    }
-]
-
 const OrderList = () => {
+    const [tableData, setTableData] = useState([]);
+    
+    useEffect(() => {
+        fetch('http://localhost:5000/allUserData')
+        .then(res => res.json())
+        .then(data => setTableData(data))
+    }, [])
     return (
         <div className='row'>
             <AdminSidebar></AdminSidebar>

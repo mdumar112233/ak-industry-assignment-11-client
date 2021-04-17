@@ -3,18 +3,19 @@ import './OrderListDetail.css';
 import dropDown from '../../../image/down-filled-triangular-arrow.png';
 
 const OrderListDetail = ({table}) => {
+    console.log(table._id);
     const handleOption = (e) =>{
         const status = {status: e.target.value}
         console.log(e.target.value)
         console.log(status)
-        fetch('http://localhost:5000/update', {
+        fetch(`http://localhost:5000/update/${table._id}`, {
             method: 'PATCH',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(status)
         })
         .then(res => res.json())
         .then(data => {
-            
+            console.log(data);
         })
     }
     return (
@@ -24,7 +25,7 @@ const OrderListDetail = ({table}) => {
                     <td>{table.name}</td>
                     <td>{table.email}</td>
                     <td>{table.service}</td>
-                    <td>{table.pay}</td>
+                    <td>Creadit Card</td>
                     <td className='table-status'>
                         <div className='d-flex'>
                         <div>
