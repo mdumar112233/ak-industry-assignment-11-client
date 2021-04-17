@@ -1,4 +1,5 @@
 import React from 'react';
+import Client from '../Client/Client';
 import Header from '../Header/Header';
 import Review from '../Review/Review';
 import Services from '../Services/Services';
@@ -9,6 +10,7 @@ const Home = () => {
             <Header></Header>
             <Services></Services>
             <Review></Review>
+            <Client></Client>
         </div>
     );
 };
