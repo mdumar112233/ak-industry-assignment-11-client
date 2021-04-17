@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import './PaymentCard.css';
 
-const PaymentCard = ({handlePayment}) => {
+const PaymentCard = ({userData}) => {
   const stripe = useStripe();
   const elements = useElements();
 
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
+  console.log(paymentSuccess);
+
   
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event,paymentSuccess) => {
     event.preventDefault();
 
     if (!stripe || !elements) {
@@ -28,37 +30,35 @@ const PaymentCard = ({handlePayment}) => {
       setPaymentSuccess(null)
     } else {
       setPaymentSuccess(paymentMethod.id);
-      handlePayment(paymentMethod.id);
+      // handlePayment(paymentMethod.id);
       setPaymentError(null);
     }
-    // console.log(userData);
-    // if(null){
-    //   const userInfoData = {...userData, payId:  paymentSuccess.id}
-    //   console.log(userInfoData);
-    //   fetch('http://localhost:5000/userInfo', {
-    //     method: 'POST',
-    //     headers: {'content-type': 'application/json'},
-    //     body: JSON.stringify(userInfoData)
-    //   })
-    //   .then(res => {
-    //     console.log('data send successfully');
-    //   })
-    // }
+    console.log(paymentSuccess);
+
+    console.log(userData);
+
 
   };
 
-  // const handleUserData = () => {
-  //   if(null){
-
-  //   }
-  // }
+  const handleUserData = () => {
+    const userInfoData = {...userData}
+      console.log(userInfoData);
+      fetch('http://localhost:5000/userInfo', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(userInfoData)
+      })
+      .then(res => {
+        console.log('data send successfully');
+      })
+  }
 
 
   return (
     <div>
           <form onSubmit={handleSubmit}>
             <CardElement />
-             <button type="submit" disabled={!stripe} className='pay-btn'>
+             <button onClick={handleUserData} type="submit" disabled={!stripe} className='pay-btn'>
               Pay
             </button>
           </form>
