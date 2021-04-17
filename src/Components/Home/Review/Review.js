@@ -14,7 +14,7 @@ const Review = () => {
     return (
         <div className='container' style={{height: '500px'}}>
             <div className="main-title text-center">
-                <h3>User Review</h3>
+                <h2>User Review</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!</p>
                 </div>
 

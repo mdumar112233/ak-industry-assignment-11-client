@@ -5,9 +5,9 @@ import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <div  className='row'>
+        <div className='row navbar-container'>
             <div className="col-md-4 logo-image">
-                <img src={logo} alt=""/>
+                <img src={logo} alt="logo"/><span className='logo'>AK INDUSTRY</span>
             </div>
             <div className="col-md-8 menu-link">
                 <ul>

@@ -1,3 +1,6 @@
+.navbar-container{
+    width: 100%;
+}
 .menu-link ul{
     list-style: none;
     text-align: right;
@@ -20,12 +23,17 @@
     margin-left: 100px;
 }
 .menu-link .login-btn{
-    background-color: #106466;
+    border: 2px solid #106466;
     padding: 10px 18px;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 .menu-link .login-btn:hover{
-        background-color: transparent;
-        border: 1px solid #106466;
+        /* background-color: transparent; */
+        background-color: #106466;
         transition: .5s;
+}
+.logo{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
 }
