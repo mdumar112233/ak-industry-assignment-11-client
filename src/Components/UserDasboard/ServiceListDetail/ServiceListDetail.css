@@ -10,10 +10,9 @@
 .service img{
     height: 60px;
 }
-.status select{
-    background-color: #00d2d3;
+.status h4{
+    background-color: #ffeaa762;
     padding: 8px 10px;
-    border: 0;
     border-radius: 3px;
-     -webkit-appearance: none;
+    color: #fdcb6e;
 }

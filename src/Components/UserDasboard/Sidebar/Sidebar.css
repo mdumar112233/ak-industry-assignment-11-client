@@ -22,6 +22,9 @@
 .menu ul{
     list-style: none;
 }
+.menu ul li{
+    margin: 15px 0;
+}
 .menu ul li .link{
     text-decoration: none;
     color: #fff;

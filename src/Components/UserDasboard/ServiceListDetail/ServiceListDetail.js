@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import './ServiceListDetail.css';
 
 const ServiceListDetail = ({serviceList}) => {
+    const [status, setStatus] = useState({});
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
+    useEffect(() => {
+        fetch('http://localhost:5000/status?email='+loggedInUser.email)
+        .then(res => res.json())
+        .then(data => setStatus(data))
+    }, [status])
 
     return (
         <div className='col-md-4'>
@@ -13,13 +21,7 @@ const ServiceListDetail = ({serviceList}) => {
                         <img src={serviceList.image} alt=""/>
                     </div>
                     <div className='status'>
-                        <form>
-                            <select name="status" id="status" >
-                                <option className='panding'value="Panding">Panding</option>
-                                <option className='start' name='start' value="Start">Start</option>
-                                <option className='done' value="Done">Done</option>
-                            </select>
-                        </form>
+                        <h4>{status.status}</h4>
                     </div>
                 </div>
                 <h5 className='mt-4 mb-3'>{serviceList.name}</h5>

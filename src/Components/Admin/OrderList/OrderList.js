@@ -15,7 +15,7 @@ const OrderList = () => {
         <div className='row'>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
-                <div style={{width: '90%'}} className='ms-4 mt-5'>
+                <div style={{width: '95%'}} className='ms-4 mt-5'>
                     <h3 className='mb-4'>Order List</h3>
                     <table>
                         <tr>
