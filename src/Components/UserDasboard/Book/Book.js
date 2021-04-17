@@ -53,7 +53,7 @@ const Book = ({handlePayment}) => {
             <div className="col-md-10 mt-5 ml-5" style={{position: 'absolute', right: 0}}>
                 <div className="ms-4">
                         {
-                            isData ? '': <div>
+                            isUserData.isData ? '': <div>
                             <h3>Book</h3>
                             <input onSubmit={handleChange} name='name' className='w-50' type="text" value={loggedInUser.name} placeholder='Enter your name'/><br/>
                             <input onSubmit={handleChange} name='email' className='mt-3 mb-3 w-50' value={loggedInUser.email} type="email" placeholder='Enter your email'/><br/>
@@ -63,11 +63,11 @@ const Book = ({handlePayment}) => {
                             </div>
                         }
                         {
-                            isData ? <div className='w-50 mt-3'>
+                            isUserData.isData ? <div className='w-50 mt-3'>
                             <Elements stripe={stripePromise}>
                                 <PaymentCard userData={isUserData}></PaymentCard>                   
-                            </Elements> : ''
-                        </div> 
+                            </Elements> 
+                        </div> : ''
                         }                    
                 </div>
             </div>

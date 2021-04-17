@@ -8,10 +8,24 @@ const PaymentCard = ({userData}) => {
 
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
-  console.log(paymentSuccess);
 
+  const handleUserData = () => {
+    if(paymentSuccess){
+    const userInfoData = {...userData, paymentId: paymentSuccess}
+      console.log(userInfoData);
+      fetch('http://localhost:5000/userInfo', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(userInfoData)
+      })
+      .then(res => {
+        console.log('data send successfully');
+      })
+    }
+
+  }
   
-  const handleSubmit = async (event,paymentSuccess) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!stripe || !elements) {
@@ -29,29 +43,12 @@ const PaymentCard = ({userData}) => {
       setPaymentError(error.message);
       setPaymentSuccess(null)
     } else {
-      setPaymentSuccess(paymentMethod.id);
-      // handlePayment(paymentMethod.id);
+      setPaymentSuccess(paymentMethod.id)
       setPaymentError(null);
     }
-    console.log(paymentSuccess);
-
-    console.log(userData);
-
-
   };
 
-  const handleUserData = () => {
-    const userInfoData = {...userData}
-      console.log(userInfoData);
-      fetch('http://localhost:5000/userInfo', {
-        method: 'POST',
-        headers: {'content-type': 'application/json'},
-        body: JSON.stringify(userInfoData)
-      })
-      .then(res => {
-        console.log('data send successfully');
-      })
-  }
+
 
 
   return (
