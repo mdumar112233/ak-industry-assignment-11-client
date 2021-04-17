@@ -2,6 +2,21 @@ import React from 'react';
 import './ManageServiceDetail.css';
 
 const ManageServiceDetail = ({data}) => {
+    console.log(data._id);
+
+    const handleDelete = (e) => {
+        const id = data._id;
+        fetch(`http://localhost:5000/delete/${id}`,{
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data){
+                e.target.parentNode.style.display = 'none';
+            }
+        })
+    }
+
     return (
         <div className='col-md-4'>
             <div style={{height:'300px'}} className="service mt-3 text-center">
@@ -12,7 +27,7 @@ const ManageServiceDetail = ({data}) => {
                 </div>
                 <h5 className='mt-4 mb-3'>{data.name}</h5>
                 <p>{data.description}</p>
-                <button className='delete-btn'>Delete</button>
+                <button onClick={handleDelete} className='delete-btn'>Delete</button>
             </div>
         </div>
     );

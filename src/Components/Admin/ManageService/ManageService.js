@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
-import map from '../../../image/sketch.png';
 import ManageServiceDetail from '../ManageServiceDetail/ManageServiceDetail';
 
 
-const ManageServiceData = [
-    {
-        name: 'Construction Map',
-         image: map,
-         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto'
-    }
-]
-
 const ManageService = () => {
+    const [manageServiceData, setManageServiceData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/serviceData')
+        .then(res => res.json())
+        .then(data => setManageServiceData(data))
+    },[])
     return (
         <div className='row'>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
                 <h3 className='mt-5 ms-4'>Manage Service</h3>
-                {
-                    ManageServiceData.map(data => <ManageServiceDetail data={data}></ManageServiceDetail>)
-                }
+                <div className="row">
+                    {
+                        manageServiceData.map(data => <ManageServiceDetail data={data}></ManageServiceDetail>)
+                     }
+                </div>
             </div>
         </div>
     );
