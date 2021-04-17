@@ -2,6 +2,8 @@ import React from 'react';
 import './ServiceListDetail.css';
 
 const ServiceListDetail = ({serviceList}) => {
+
+
     return (
         <div className='col-md-4'>
                 <h3 className='ms-4 mt-3'>Booking List</h3>
@@ -14,7 +16,7 @@ const ServiceListDetail = ({serviceList}) => {
                         <form>
                             <select name="status" id="status" >
                                 <option className='panding'value="Panding">Panding</option>
-                                <option className='start' value="Start">Start</option>
+                                <option className='start' name='start' value="Start">Start</option>
                                 <option className='done' value="Done">Done</option>
                             </select>
                         </form>

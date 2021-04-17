@@ -20,14 +20,6 @@ const Book = ({handlePayment}) => {
     console.log(isUserData);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
-    const handleChange = e => {
-        // const newData = {...isUserData};
-        // newData.name = loggedInUser.name;
-        // newData.email = loggedInUser.email;
-        // newData.service = serviceInfo.name;
-        // // newData.isData = true;
-        // setIsUserData(newData);
-    }
 
     useEffect(() => {
         fetch('http://localhost:5000/serviceInfo/'+id)
@@ -55,9 +47,9 @@ const Book = ({handlePayment}) => {
                         {
                             isUserData.isData ? '': <div>
                             <h3>Book</h3>
-                            <input onSubmit={handleChange} name='name' className='w-50' type="text" value={loggedInUser.name} placeholder='Enter your name'/><br/>
-                            <input onSubmit={handleChange} name='email' className='mt-3 mb-3 w-50' value={loggedInUser.email} type="email" placeholder='Enter your email'/><br/>
-                            <input onSubmit={handleChange} name='service' className='w-50' type="text" placeholder='Enter your service' value={serviceInfo.name}/>
+                            <input name='name' className='w-50' type="text" value={loggedInUser.name} placeholder='Enter your name'/><br/>
+                            <input name='email' className='mt-3 mb-3 w-50' value={loggedInUser.email} type="email" placeholder='Enter your email'/><br/>
+                            <input name='service' className='w-50' type="text" placeholder='Enter your service' value={serviceInfo.name}/>
                             <br/>
                             <button onClick={handleUserInfo}>submit</button>
                             </div>

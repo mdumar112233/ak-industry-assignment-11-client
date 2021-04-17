@@ -11,7 +11,7 @@ const PaymentCard = ({userData}) => {
 
   const handleUserData = () => {
     if(paymentSuccess){
-    const userInfoData = {...userData, paymentId: paymentSuccess}
+    const userInfoData = {...userData, paymentId: paymentSuccess, status: 'start'}
       console.log(userInfoData);
       fetch('http://localhost:5000/userInfo', {
         method: 'POST',

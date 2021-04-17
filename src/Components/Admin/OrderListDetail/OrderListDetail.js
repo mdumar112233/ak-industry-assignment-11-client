@@ -3,6 +3,20 @@ import './OrderListDetail.css';
 import dropDown from '../../../image/down-filled-triangular-arrow.png';
 
 const OrderListDetail = ({table}) => {
+    const handleOption = (e) =>{
+        const status = {status: e.target.value}
+        console.log(e.target.value)
+        console.log(status)
+        fetch('http://localhost:5000/update', {
+            method: 'PATCH',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(status)
+        })
+        .then(res => res.json())
+        .then(data => {
+            
+        })
+    }
     return (
         <div>
             <table>
@@ -16,9 +30,9 @@ const OrderListDetail = ({table}) => {
                         <div>
                             <form>
                                 <select name="" id="">
-                                    <option value="Start">Start</option>
-                                    <option value="Panding">Panding</option>
-                                    <option value="Done">Done</option> 
+                                    <option  onClick={handleOption} value="Start">Start</option>
+                                    <option  onClick={handleOption} value="Panding">Panding</option>
+                                    <option  onClick={handleOption} value="Done">Done</option> 
                                 </select> 
                             </form>
                         </div>
