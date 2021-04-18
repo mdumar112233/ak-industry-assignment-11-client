@@ -45,7 +45,7 @@ const Comment = () => {
     const handleSubmit = () => {
         const allReview = {...review, ratingCount, image: imageUrl}
         console.log(allReview);
-        fetch('http://localhost:5000/review', {
+        fetch('https://calm-anchorage-95047.herokuapp.com/review', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(allReview)

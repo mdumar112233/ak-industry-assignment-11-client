@@ -6,7 +6,7 @@ const ManageServiceDetail = ({data}) => {
 
     const handleDelete = (e) => {
         const id = data._id;
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://calm-anchorage-95047.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

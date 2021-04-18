@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import cart from '../../../image/shopping-cart-empty-side-view.png';
 import list from '../../../image/clipboard.png';
 import comment from '../../../image/comment.png';
@@ -11,6 +11,7 @@ const Sidebar = () => {
     const handleHome = () => {
         history.push('/')
     }
+
     return (
         <div className='col-md-2 sidebar-container'>
             <div style={{cursor: 'pointer'}} onClick={handleHome} className="sidebar-title">

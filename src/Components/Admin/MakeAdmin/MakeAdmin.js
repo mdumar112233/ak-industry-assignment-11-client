@@ -13,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdmin = (e) => {
         const adminData = {...admin};
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://calm-anchorage-95047.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(adminData)

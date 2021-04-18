@@ -8,7 +8,7 @@ const Services = () => {
     // font-family: 'Bebas Neue', cursive
 
     useEffect(() => {
-        fetch('http://localhost:5000/serviceData')
+        fetch('https://calm-anchorage-95047.herokuapp.com/serviceData')
         .then(res => res.json())
         .then(data => setServiceCard(data))
     }, [])

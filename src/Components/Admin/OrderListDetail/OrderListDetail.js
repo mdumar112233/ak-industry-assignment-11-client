@@ -8,7 +8,7 @@ const OrderListDetail = ({table}) => {
         const status = {status: e.target.value}
         console.log(e.target.value)
         console.log(status)
-        fetch(`http://localhost:5000/update/${table._id}`, {
+        fetch(`https://calm-anchorage-95047.herokuapp.com/update/${table._id}`, {
             method: 'PATCH',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(status)

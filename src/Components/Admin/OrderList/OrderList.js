@@ -7,7 +7,7 @@ const OrderList = () => {
     const [tableData, setTableData] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/allUserData')
+        fetch('https://calm-anchorage-95047.herokuapp.com/allUserData')
         .then(res => res.json())
         .then(data => setTableData(data))
     }, [])

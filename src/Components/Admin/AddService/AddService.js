@@ -35,7 +35,7 @@ const AddService = () => {
         console.log(submitData);
 
         if(imageUrl){
-            fetch('http://localhost:5000/services', {
+            fetch('https://calm-anchorage-95047.herokuapp.com/services', {
                 method: 'POST',
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(submitData)

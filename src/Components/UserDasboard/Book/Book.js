@@ -23,7 +23,7 @@ const Book = ({handlePayment}) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/serviceInfo/'+id)
+        fetch('https://calm-anchorage-95047.herokuapp.com/serviceInfo/'+id)
         .then(res => res.json())
         .then(data => setServiceInfo(data))
     }, [id])
