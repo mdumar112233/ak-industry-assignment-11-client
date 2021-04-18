@@ -5,7 +5,7 @@ import './Services.css';
 
 const Services = () => {
     const [serviceCard, setServiceCard] = useState([]);
-
+    // font-family: 'Bebas Neue', cursive
 
     useEffect(() => {
         fetch('http://localhost:5000/serviceData')
@@ -17,7 +17,7 @@ const Services = () => {
         <div className='service-container'>
             <div className='container '>
             <div className="main-title text-center">
-            <h2>Our Services</h2>
+            <h2 style={{fontFamily: "'Bebas Neue', cursive", letterSpacing: '2px', wordSpacing: '2px', fontSize:'40px'}}>Our Services</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque!</p>
             </div>
             <div className="d-flex flex-column">

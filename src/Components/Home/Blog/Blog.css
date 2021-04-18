@@ -1,0 +1,13 @@
+.blog-container{
+    height: 600px;
+}
+.blog-card img{
+    height: 157px;
+}
+.card-btn{
+    background-color: teal;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px 15px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Blog from '../Blog/Blog';
 import Client from '../Client/Client';
 import Header from '../Header/Header';
 import Review from '../Review/Review';
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <Services></Services>
+            <Blog></Blog>
             <Review></Review>
             <Client></Client>
         </div>

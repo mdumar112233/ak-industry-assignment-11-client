@@ -9,7 +9,7 @@ const Client = () => {
     return (
         <div className='container client-container'>
             <div className='client-title text-center mb-5'>
-                <h2 className='mb-4'>Customer Who Love Us</h2>
+                <h2 className='mb-4' style={{fontFamily: "'Bebas Neue', cursive", letterSpacing: '2px', wordSpacing: '2px', fontSize:'40px'}}>Customer Who Love Us</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid ad eaque ullam saepe nihil.</p>
             </div>
             <div className="row construction-image mt-5">
