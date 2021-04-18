@@ -11,3 +11,14 @@
     color: #fff;
     padding: 10px 15px;
 }
+
+@media screen and (max-width: 375px){
+    .blog-container{
+        margin-top: 650px;
+        width: 100%;
+    }
+    .blog-card{
+        margin: 10px 2rem;
+        width: 300px;
+    }
+}

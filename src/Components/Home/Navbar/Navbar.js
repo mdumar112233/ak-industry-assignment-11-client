@@ -10,9 +10,9 @@ const Navbar = () => {
         <div className='row navbar-container'>
             <div className="col-md-4 logo-image">
                 <div className="logoOne"><img src={logo} alt="logo"/><span className='logo'>AK INDUSTRY</span></div>
-                <div className='menu-icon'><img onClick={() => setS} src={menu} alt=""/></div>
+                <div className='menu-icon'><img onClick={() => setShowLinks(!showLinks)} src={menu} alt=""/></div>
             </div>
-            <div className="col-md-8 menu-link" id={showLinks ? 'hidden': ''}>
+            <div className="col-md-8 menu-link" id={showLinks ? 'hidden' : ''}>
                 <ul>
                     <li>
                         <Link className='link' to='/home'>Home</Link>

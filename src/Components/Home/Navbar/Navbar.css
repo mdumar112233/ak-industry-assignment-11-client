@@ -46,14 +46,16 @@
         display: block;
         text-align: center;
         margin-left: 100px;
+    }
+    .menu-link{
         display: none;
     }
-    .menu-link ul li{
+    #hidden{
         position: absolute;
         top: 80px;
        max-height: 230px;
        width: 100%;
-        /* display: flex; */
+        display: flex;
         flex-direction: column;
         /* align-items: center; */
     }
