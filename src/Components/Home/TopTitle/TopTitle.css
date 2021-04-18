@@ -27,3 +27,9 @@
     letter-spacing: 2px;
     word-spacing: 2px;
 }
+
+@media screen and (max-width: 375px){
+    .top-title{
+        margin-top: 20px;
+    }
+}
