@@ -50,15 +50,6 @@
     .menu-link{
         display: none;
     }
-    #hidden{
-        position: absolute;
-        top: 80px;
-       max-height: 230px;
-       width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-    }
     .logoOne img{
         height: 60px;
     }

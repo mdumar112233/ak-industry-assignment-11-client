@@ -8,4 +8,8 @@
     background-color: hsl(183, 53%, 86%);
     padding: 25px;
     border-radius: 4px;
+    transition: 1s;
+}
+.service-card:hover{
+    transform: rotate(-360deg);
 }

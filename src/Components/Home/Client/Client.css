@@ -11,5 +11,6 @@
 @media screen and (max-width: 375px) {
     .client-container{
         margin-top: 800px;
+        text-align: center;
     }
 }

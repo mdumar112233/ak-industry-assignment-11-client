@@ -8,13 +8,13 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="container mt-5">
-            <div className='row text-left'>
+            <div className='row'>
             <div className="col-md-3 mt-5">
                 <h5>About us</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nobis obcaecati nemo enim ab totam beatae quos ullam reprehenderit libero.</p>
             </div>
             <div className="col-md-3 mt-5">
-                <div className="ms-5">
+                <div className="ms-5 quick-link">
                 <h5>Quick Link</h5>
                 <p>Project</p>
                 <p>Admin</p>
