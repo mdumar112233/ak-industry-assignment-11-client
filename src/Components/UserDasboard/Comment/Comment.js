@@ -57,7 +57,7 @@ const Comment = () => {
 
 
     return (
-        <div className='row'>
+        <div className='row' style={{width: '100%'}}>
             <Sidebar></Sidebar>
             <div className="col-md-10 mt-5">
                 <h3 className='mb-3 ms-4 '>Review</h3>

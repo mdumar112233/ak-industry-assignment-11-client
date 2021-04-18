@@ -25,13 +25,13 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div className='row'>
+        <div className='row'  style={{width: '100%'}}>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
                 <div className="mt-5 ms-4">
                     <h3>Make Admin</h3>
                     <form action="">
-                    <label className='mt-3' htmlFor="">Email</label> <br/>
+                    <label className='mt-3 mb-2' htmlFor="">Email</label> <br/>
                     <input onBlur={handleChange} type="email" name='email' placeholder='Enter your email' required/> <input onClick={handleAdmin} className='make-admin-btn' type="submit" value='Submit'/>
                     </form>
                 </div>

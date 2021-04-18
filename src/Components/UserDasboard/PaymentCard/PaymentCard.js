@@ -49,8 +49,6 @@ const PaymentCard = ({userData}) => {
   };
 
 
-
-
   return (
     <div>
           <form onSubmit={handleSubmit}>

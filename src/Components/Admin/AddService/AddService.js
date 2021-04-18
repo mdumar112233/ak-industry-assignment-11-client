@@ -48,7 +48,7 @@ const AddService = () => {
 
 
     return (
-        <div className='row'>
+        <div className='row' style={{width: '100%'}}>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
                 <h3 className='ms-4 mt-5'>Add Service</h3>

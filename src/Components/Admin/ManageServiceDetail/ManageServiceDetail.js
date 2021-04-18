@@ -19,7 +19,7 @@ const ManageServiceDetail = ({data}) => {
 
     return (
         <div className='col-md-4'>
-            <div style={{height:'300px'}} className="service mt-3 text-center">
+            <div style={{height:'auto'}} className="service mt-3 text-center">
                 <div className="img-option">
                     <div>
                         <img src={data.image} alt=""/>

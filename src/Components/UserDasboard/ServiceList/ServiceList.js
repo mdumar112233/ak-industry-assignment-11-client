@@ -13,7 +13,7 @@ const serviceListData = [
 
 const ServiceList = () => {
     return (
-        <div className='row'>
+        <div className='row'  style={{width: '100%'}}>
             <Sidebar></Sidebar>
             <div className='col-md-10'>
                 <div className="row">

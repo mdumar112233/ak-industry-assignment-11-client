@@ -12,7 +12,7 @@ const ManageService = () => {
         .then(data => setManageServiceData(data))
     },[])
     return (
-        <div className='row'>
+        <div className='row' style={{width: '100%'}}>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
                 <h3 className='mt-5 ms-4'>Manage Service</h3>

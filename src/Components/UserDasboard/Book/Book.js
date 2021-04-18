@@ -5,6 +5,7 @@ import {loadStripe} from '@stripe/stripe-js';
 import PaymentCard from '../PaymentCard/PaymentCard';
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
+import './Book.css';
 
 const stripePromise = loadStripe('pk_test_51IeAn5F8Tt6idX1YNJvJVrIfNjU3XrD6sHsAdImNegbHw4cdba24Ps7RmrvZ0hrI3uVrTVxzgyhI6SxkDlPcs66700yOJaMdXL');
 
@@ -40,7 +41,7 @@ const Book = ({handlePayment}) => {
     }
 
     return (
-        <div className='row'>
+        <div className='row' style={{width: '100%'}}>
             <Sidebar></Sidebar>
             <div className="col-md-10 mt-5 ml-5" style={{position: 'absolute', right: 0}}>
                 <div className="ms-4">
@@ -51,7 +52,7 @@ const Book = ({handlePayment}) => {
                             <input name='email' className='mt-3 mb-3 w-50' value={loggedInUser.email} type="email" placeholder='Enter your email'/><br/>
                             <input name='service' className='w-50' type="text" placeholder='Enter your service' value={serviceInfo.name}/>
                             <br/>
-                            <button onClick={handleUserInfo}>submit</button>
+                            <button className='book-submit' onClick={handleUserInfo}>submit</button>
                             </div>
                         }
                         {

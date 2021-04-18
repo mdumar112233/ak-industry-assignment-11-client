@@ -19,7 +19,7 @@ const Sidebar = () => {
             <div className="menu">
                 <ul>
                     <li>
-                        <img src={cart} alt=""/> <span><Link className='link' to='/book'>Book</Link></span>
+                        <img src={cart} alt=""/> <span><Link className='link' to='/book/id'>Book</Link></span>
                     </li>
                     <li>
                         <img src={list} alt=""/> <span><Link className='link' to='/bookList'>Book List</Link></span>

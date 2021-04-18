@@ -13,7 +13,8 @@ const ServiceListDetail = ({serviceList}) => {
     }, [status])
 
     return (
-        <div className='col-md-4'>
+        <div>
+            <div className='col-md-4'>
                 <h3 className='ms-4 mt-3'>Booking List</h3>
             <div className="service mt-5 ms-4">
                 <div className="img-option d-flex justify-content-between">
@@ -27,6 +28,7 @@ const ServiceListDetail = ({serviceList}) => {
                 <h5 className='mt-4 mb-3'>{serviceList.name}</h5>
                 <p>{serviceList.description}</p>
             </div>
+        </div>
         </div>
     );
 };

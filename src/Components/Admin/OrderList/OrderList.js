@@ -12,7 +12,7 @@ const OrderList = () => {
         .then(data => setTableData(data))
     }, [])
     return (
-        <div className='row'>
+        <div className='row' style={{width: '100%'}}>
             <AdminSidebar></AdminSidebar>
             <div className="col-md-10">
                 <div style={{width: '95%'}} className='ms-4 mt-5'>
