@@ -10,6 +10,3 @@
     border-radius: 4px;
     transition: 1s;
 }
-.service-card:hover{
-    transform: rotate(-360deg);
-}
