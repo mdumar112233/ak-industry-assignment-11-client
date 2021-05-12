@@ -8,6 +8,13 @@
     margin-top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+    .client-container{
+        margin-top: 800px;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .client-container{
         margin-top: 800px;

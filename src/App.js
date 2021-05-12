@@ -14,9 +14,10 @@ import AddService from './Components/Admin/AddService/AddService';
 import OrderList from './Components/Admin/OrderList/OrderList';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './Components/Admin/ManageService/ManageService';
-import Login from './Components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import CreateAccount from './Components/LoginUser/CreateAccount';
+import Login from './Components/LoginUser/Login';
 
 export const UserContext = createContext();
 
@@ -58,6 +59,9 @@ function App() {
         </Route>
         <Route path='/manageService'>
           <ManageService/>
+        </Route>
+        <Route path='/createAccount'>
+          <CreateAccount/>
         </Route>
         <Route path='/login'>
           <Login/>

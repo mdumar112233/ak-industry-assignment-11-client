@@ -9,11 +9,17 @@
     border-radius: 4px;
 
 }
+.rating{
+    margin-left: 100px !important;
+}
 .review-detail .star{
     height: 30px;
 }
 @media screen and (max-width: 375px) {
     .review-detail{
         margin: 0 20px 20px 0;
+    }
+    .rating{
+        margin-left: 70px !important;
     }
 }

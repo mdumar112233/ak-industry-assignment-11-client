@@ -8,7 +8,7 @@ const ReviewDetail = ({review}) => {
             <div className="review-detail">
                 <img src={review.image} alt=""/>
                 <h4 className='mt-3 mb-2'>{review.name}</h4>
-                    <div style={{marginLeft: '120px'}}>
+                    <div className='rating' >
                         <ReactStars
                         size={24}
                         value={review.ratingCount}
