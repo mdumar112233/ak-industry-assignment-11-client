@@ -1,5 +1,11 @@
 .login-section {
-    margin: 12rem 35rem;
+    margin-top: 9rem;
+    background-color: #bdc3c7;
+    width: 400px;
+    height: 340px;
+    padding: 20px;
+    margin-left: 30rem;
+    border-radius: 5px;
 }
 .login-section img{
     height: 30px;
@@ -18,9 +24,16 @@
     border: 2px solid gray;
     padding: 5px;
     border-radius: 8px;
+    margin: 0 auto;
 }
 .login-container{
     display: flex;
     justify-content: center;
-    margin-top: 11rem;
+    margin-top: 9rem;
+    background-color: #bdc3c7;
+    width: 400px;
+    height: 340px;
+    padding: 20px;
+    margin-left: 30rem;
+    border-radius: 5px;
 }

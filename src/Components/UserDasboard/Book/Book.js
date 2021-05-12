@@ -48,9 +48,11 @@ const Book = ({handlePayment}) => {
                         {
                             isUserData.isData ? '': <div>
                             <h3>Book</h3>
-                            <input name='name' className='w-50' type="text" value={loggedInUser.name} placeholder='Enter your name'/><br/>
+                           <form>
+                           <input name='name' className='w-50' type="text" value={loggedInUser.name} placeholder='Enter your name'/><br/>
                             <input name='email' className='mt-3 mb-3 w-50' value={loggedInUser.email} type="email" placeholder='Enter your email'/><br/>
-                            <input name='service' className='w-50' type="text" placeholder='Enter your service' value={serviceInfo.name}/>
+                            <input name='service' className='w-50' type="text" placeholder='Enter your service' value={serviceInfo.name} required/>
+                           </form>
                             <br/>
                             <button className='book-submit' onClick={handleUserInfo}>submit</button>
                             </div>

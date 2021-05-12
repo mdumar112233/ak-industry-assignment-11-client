@@ -78,7 +78,7 @@ const CreateAccount = () => {
     }
     return (
         <div>
-            <div className="login-section">
+            <div className="login-section text-center">
                 <h2>Create Account</h2>
                 <form onSubmit={handleSubmit}>
                 {/* <input type="text" onBlur={handleChange} name='name' placeholder='your name' required /><br/><br/> */}
