@@ -3,6 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 650px;
 }
 .sub-container{
@@ -12,4 +13,10 @@
     top: 0;
     width: 100%;
     height: 650px;
+}
+
+@media screen and (max-width: 768px){
+    .header-container{
+        max-height: auto;
+    }
 }

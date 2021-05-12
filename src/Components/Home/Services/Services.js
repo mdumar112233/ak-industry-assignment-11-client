@@ -5,7 +5,6 @@ import './Services.css';
 
 const Services = () => {
     const [serviceCard, setServiceCard] = useState([]);
-    // font-family: 'Bebas Neue', cursive
 
     useEffect(() => {
         fetch('https://calm-anchorage-95047.herokuapp.com/serviceData')

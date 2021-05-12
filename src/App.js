@@ -16,6 +16,7 @@ import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './Components/Admin/ManageService/ManageService';
 import Login from './Components/Login/Login';
 import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -31,21 +32,21 @@ function App() {
         <Route path='/home'>
           <Home/>
         </Route>
-        <Route path='/dashboard'>
+        <PrivateRoute path='/dashboard'>
           <Dashboard/>
-        </Route>
-        <Route path='/book/:id'>
+        </PrivateRoute>
+        <PrivateRoute path='/book/:id'>
           <Book/>
-        </Route>
+        </PrivateRoute>
         <Route path='/bookList'>
           <ServiceList/>
         </Route>
         <Route path='/review'>
           <Comment/>
         </Route>  
-        <Route path='/admin'>
+        <PrivateRoute path='/admin'>
           <Admin/>
-        </Route>
+        </PrivateRoute>
         <Route path='/order'>
           <OrderList></OrderList>
         </Route>
