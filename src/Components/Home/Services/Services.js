@@ -5,9 +5,10 @@ import './Services.css';
 
 const Services = () => {
     const [serviceCard, setServiceCard] = useState([]);
+    console.log('my data', serviceCard)
 
     useEffect(() => {
-        fetch('https://calm-anchorage-95047.herokuapp.com/serviceData')
+        fetch('https://murmuring-earth-58571.herokuapp.com/serviceData')
         .then(res => res.json())
         .then(data => setServiceCard(data))
     }, [])

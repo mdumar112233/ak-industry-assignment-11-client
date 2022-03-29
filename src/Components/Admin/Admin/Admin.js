@@ -9,7 +9,7 @@ const Admin = () => {
     console.log(admin);
 
     useEffect(() => {
-        fetch('https://calm-anchorage-95047.herokuapp.com/getAdmin')
+        fetch('https://murmuring-earth-58571.herokuapp.com/getAdmin')
         .then(res => res.json())
         .then(data => setAdmin(data))
     }, [])

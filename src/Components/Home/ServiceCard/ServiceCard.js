@@ -3,6 +3,7 @@ import './ServiceCard.css';
 import { useHistory } from "react-router-dom";
 
 const ServiceCard = ({service}) => {
+    console.log(service)
     const history = useHistory();
     const handleService = () => {
         const id =service.name;

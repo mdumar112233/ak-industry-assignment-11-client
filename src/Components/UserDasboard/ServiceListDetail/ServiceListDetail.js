@@ -7,7 +7,7 @@ const ServiceListDetail = ({serviceList}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('https://calm-anchorage-95047.herokuapp.com/status?email='+loggedInUser.email)
+        fetch('https://murmuring-earth-58571.herokuapp.com/status?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setStatus(data))
     }, [status])

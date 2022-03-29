@@ -1,5 +1,5 @@
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useState } from 'react';
-import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import './PaymentCard.css';
 
 const PaymentCard = ({userData}) => {
@@ -13,7 +13,7 @@ const PaymentCard = ({userData}) => {
     if(paymentSuccess){
     const userInfoData = {...userData, paymentId: paymentSuccess, status: 'start'}
       console.log(userInfoData);
-      fetch('https://calm-anchorage-95047.herokuapp.com/userInfo', {
+      fetch('https://murmuring-earth-58571.herokuapp.com/userInfo', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(userInfoData)

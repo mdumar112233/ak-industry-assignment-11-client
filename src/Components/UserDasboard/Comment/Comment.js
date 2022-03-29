@@ -1,9 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import Sidebar from '../Sidebar/Sidebar';
-import './Comment.css';
 import ReactStars from "react-rating-stars-component";
 import upload from '../../../image/cloud-computing.png';
-import axios from 'axios';
+import Sidebar from '../Sidebar/Sidebar';
+import './Comment.css';
 
 
 const Comment = () => {
@@ -45,7 +45,7 @@ const Comment = () => {
     const handleSubmit = () => {
         const allReview = {...review, ratingCount, image: imageUrl}
         console.log(allReview);
-        fetch('https://calm-anchorage-95047.herokuapp.com/review', {
+        fetch('https://murmuring-earth-58571.herokuapp.com/review', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(allReview)

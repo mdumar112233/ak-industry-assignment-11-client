@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import AdminSidebar from '../AdminSidebar/AdminSidebar';
-import upload from '../../../image/cloud-computing.png';
-import './AddService.css';
 import axios from 'axios';
+import React, { useState } from 'react';
+import upload from '../../../image/cloud-computing.png';
+import AdminSidebar from '../AdminSidebar/AdminSidebar';
+import './AddService.css';
 
 const AddService = () => {
     const [serviceData, setServiceData] = useState({});
@@ -35,7 +35,7 @@ const AddService = () => {
         console.log(submitData);
 
         if(imageUrl){
-            fetch('https://calm-anchorage-95047.herokuapp.com/services', {
+            fetch('https://murmuring-earth-58571.herokuapp.com/services', {
                 method: 'POST',
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(submitData)

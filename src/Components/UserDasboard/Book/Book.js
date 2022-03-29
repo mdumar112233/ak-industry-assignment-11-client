@@ -1,10 +1,10 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React, { useContext, useEffect, useState } from 'react';
-import Sidebar from '../Sidebar/Sidebar';
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
-import PaymentCard from '../PaymentCard/PaymentCard';
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
+import PaymentCard from '../PaymentCard/PaymentCard';
+import Sidebar from '../Sidebar/Sidebar';
 import './Book.css';
 
 const stripePromise = loadStripe('pk_test_51IeAn5F8Tt6idX1YNJvJVrIfNjU3XrD6sHsAdImNegbHw4cdba24Ps7RmrvZ0hrI3uVrTVxzgyhI6SxkDlPcs66700yOJaMdXL');
@@ -23,7 +23,7 @@ const Book = ({handlePayment}) => {
 
 
     useEffect(() => {
-        fetch('https://calm-anchorage-95047.herokuapp.com/serviceInfo/'+id)
+        fetch('https://murmuring-earth-58571.herokuapp.com/serviceInfo/'+id)
         .then(res => res.json())
         .then(data => setServiceInfo(data))
     }, [id])
